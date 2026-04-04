@@ -11,10 +11,8 @@ void setup() {
   lcd.init();
   lcd.backlight();
 
-  pinMode(trig, OUTPUT);
-  pinMode(echo, INPUT);
 }
-
+####comentarios de prueba hahah
 void loop() {
   long tiempo;
   int distancia;
