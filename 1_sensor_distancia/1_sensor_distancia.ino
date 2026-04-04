@@ -5,15 +5,7 @@ LiquidCrystal_I2C lcd(0x20, 16, 2);
 
 int trig = 9;
 int echo = 10;
-
-void setup() {
-  lcd.begin(16,2);
-  lcd.init();
-  lcd.backlight();
-
-  pinMode(trig, OUTPUT);
-  pinMode(echo, INPUT);
-}
+#Linea agregada
 
 void loop() {
   long tiempo;
