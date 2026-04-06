@@ -8,7 +8,8 @@ int echoPin = 5;
 // Creamos el servidor web en el puerto estándar (80)
 WebServer servidor(80);
 
-void setup() {
+void setup()
+{
   Serial.begin(115200);
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
@@ -18,7 +19,8 @@ void setup() {
   // -----------------------------------------
 
   // Diseñamos lo que mostrará la página web cuando alguien entre
-  servidor.on("/", []() {
+  servidor.on("/", []()
+              {
     
     // 1. El ESP32 hace el cálculo de la distancia
     long duracion, distancia;
@@ -49,14 +51,14 @@ void setup() {
     html += "</body></html>";
     
     // Enviamos la página al celular o compu
-    servidor.send(200, "text/html", html);
-  });
+    servidor.send(200, "text/html", html); });
 
   // Encendemos el servidor
   servidor.begin();
 }
 
-void loop() {
+void loop()
+{
   // El ESP32 siempre está atento a que alguien abra la página
   servidor.handleClient();
 }
