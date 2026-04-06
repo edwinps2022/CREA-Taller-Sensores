@@ -14,9 +14,6 @@ void setup()
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
 
-  // --- ¡ZONA DE MODIFICACIÓN 1: El Wi-Fi! ---
-  WiFi.softAP("Radar-Murcielago", "12345678"); // Nombre de red y contraseña
-  // -----------------------------------------
 
   // Diseñamos lo que mostrará la página web cuando alguien entre
   servidor.on("/", []()
